@@ -1,0 +1,11 @@
+<%= link_to "Add a new todo", new_todo_path %>
+
+<% if @todos %>
+  <ul class="todos">
+    <% @todos.each do |todo| %>
+      <li><%= todo.title %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Add some todos!</p>
+<% end %>
